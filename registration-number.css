@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .displayThePlates{
+      border: 1px;
+      border-radius: 50%;
+      border-color: chartreuse;
+  }
+  .myText{
+      background-color: aquamarine;
+  }

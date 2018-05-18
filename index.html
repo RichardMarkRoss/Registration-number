@@ -2,21 +2,51 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-<link rel="stylesheet" href="/css/registration-number.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="registration-number.css">
     <title>registration number</title>
   </head>
   <body>
     <div class="container">
-      <div class="text-box">
+      <div class="first"> 
 
       </div>
-      <div class="botton">
-
+      <div class="second">
+      <br>
+      <div class="">
+<h1>registration number web app</h1>
+<br>
+<h3>insert the registration number!</h3>
       </div>
+      <br>
+      <div class="textBox">
+        <label>Name</label>
+        <input type = "text"
+               class = "myText"
+               value = "">
+      </div>
+      <br>
+      <div>
+          <form action="/action_page.php">
+            <select name="places">
+              <option value="CapeTown">Cape Town</option>
+              <option value="Bellville">Bellville</option>
+              <option value="Stellenbosch">Stellenbosch</option>
+              <option value="Paarl">Paarl</option>
+            </select>
+          </form>
+      </div>
+      <br>
+      <div class='button'> 
+          <button class="btnDisplayValue" type="button" name="button" >ADD</button>
+      </div>
+      <br>
       <div class="display">
-
+      <span><span class="displayThePlates"> </span></span>
+      </div>
       </div>
     </div>
   </body>
+  <script src="registration-number-factory.js" charset="utf-8"></script>
   <script src="registration-number.js" charset="utf-8"></script>
 </html>
