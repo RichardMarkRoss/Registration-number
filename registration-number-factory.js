@@ -1,22 +1,22 @@
 function RegNumber(nameKept){
 
-var holdName = "";
+    var containValue = "";
+    var holdingTheKey = {};
 
-function Registration(nameKept){
-
-    if(nameKept != ""){
-
-    if(nameKept.startsWith("CA")){
-        holdName = nameKept;
-        //return holdName;
+    function TheLogicOfReg(nameKept){
+        if(nameKept){
+            holdingTheKey = nameKept
+        }
+        if (holdingTheKey != ""){
+            containValue = holdingTheKey.value;
+        }
+        function createElem(reg){
+            var newLi = document.createElement('li')
+            newLi.textContent = reg;
+            displayThePlates.appendChild(newLi);
+        }
     }
-    return holdName;
-}else{
-    alert('stop');
-}
-
-}
-return{
-    Registration
-};
+   return{
+            createElem,
+    }
 }

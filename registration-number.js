@@ -7,7 +7,7 @@ var nameHolder = RegNumber(nameKept);
     function RegTheLogic(){
 
 
-    displayThePlates.innerHTML = nameHolder.Registration();
+    displayThePlates.innerHTML = nameHolder.createElem();
 
 }
 btnDisplayValue.addEventListener('click', function(){
