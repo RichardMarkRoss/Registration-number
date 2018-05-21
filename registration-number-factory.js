@@ -1,22 +1,23 @@
-function RegNumber(nameKept){
+function RegNumber(storedUsers){
 
-    var containValue = "";
-    var holdingTheKey = {};
+    var namesStored = storedUsers||{}
 
-    function TheLogicOfReg(nameKept){
-        if(nameKept){
-            holdingTheKey = nameKept
-        }
-        if (holdingTheKey != ""){
-            containValue = holdingTheKey.value;
-        }
-        function createElem(reg){
-            var newLi = document.createElement('li')
-            newLi.textContent = reg;
-            displayThePlates.appendChild(newLi);
+    function getReg(reg){
+
+        if(storedUsers){
+            namesStored = storedUsers;
+          }
+          
+        if(reg != ''){
+            if(reg[reg] != undefined){
+                namesStored[reg] = 0
+            }
         }
     }
-   return{
-            createElem,
+    function returnRegMap(){
+        return namesStored;
     }
+
+
 }
+

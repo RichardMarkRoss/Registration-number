@@ -1,15 +1,30 @@
+var reg = document.querySelector('.myText')
 var valueBox = document.querySelector(".textBox");
 var btnDisplayValue = document.querySelector('.btnDisplayValue');
 var displayThePlates = document.querySelector(".displayThePlates");
-var nameKept = valueBox.value;
-var nameHolder = RegNumber(nameKept);
+var storedUsers = valueBox.value;
 
-    function RegTheLogic(){
+var users = localStorage.getItem("users");
+var storedUsers = users ? JSON.parse(localStorage.getItem('users')) : {};
+var nameHolder = RegNumber(storedUsers);
 
+function CreateElem(regValue){
 
-    displayThePlates.innerHTML = nameHolder.createElem();
+    var checkedRadioBtn = document.querySelector("input[name='places']:checked");
+    if (checkedRadioBtn){
+        var langChosen = checkedRadioBtn.value;
+    }
+
+    var newLi = document.createElement('li');
+    newLi.textContent = regValue;
+    displayThePlates.appendChild(newLi);
+
+    localStorage.setItem('user', JSON.stringify(nameHolder.namesStored()))
 
 }
+
 btnDisplayValue.addEventListener('click', function(){
-    RegNumber();
+    var regValue = reg.value
+    CreateElem(regValue)
+   
 });

@@ -6,13 +6,15 @@
     padding: 0 20px;
     box-sizing: border-box;
   }
-  .displayThePlates{
-      border: 1px;
-      border-radius: 50%;
-      border-color: chartreuse;
-  }
-  .myText{
-      background-color: aquamarine;
-  }
 
-  
+li{
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    list-style-type: none;
+    display: block;
+    width: 10%;
+    padding-left: 30px;
+    margin: 0.5em 0;
+    background-color: yellow;
+}
