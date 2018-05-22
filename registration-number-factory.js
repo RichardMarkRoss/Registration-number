@@ -1,6 +1,6 @@
 function RegNumber(storedUsers){
 
-    var namesStored = storedUsers||{}
+    var namesStored = storedUsers||{};
 
     function getReg(reg){
 
@@ -9,9 +9,12 @@ function RegNumber(storedUsers){
           }
           
         if(reg != ''){
-            if(reg[reg] != undefined){
-                namesStored[reg] = 0
+            
+
+            if(namesStored[reg] != undefined){
+                namesStored[reg] = 0;
             }
+
         }
     }
     function returnRegMap(){

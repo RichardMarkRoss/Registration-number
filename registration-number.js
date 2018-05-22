@@ -1,4 +1,4 @@
-var reg = document.querySelector('.myText')
+var reg = document.querySelector('.myText');
 var valueBox = document.querySelector(".textBox");
 var btnDisplayValue = document.querySelector('.btnDisplayValue');
 var displayThePlates = document.querySelector(".displayThePlates");
@@ -19,12 +19,12 @@ function CreateElem(regValue){
     newLi.textContent = regValue;
     displayThePlates.appendChild(newLi);
 
-    localStorage.setItem('user', JSON.stringify(nameHolder.namesStored()))
+    localStorage.setItem('user', JSON.stringify(newLi));
 
 }
 
 btnDisplayValue.addEventListener('click', function(){
-    var regValue = reg.value
-    CreateElem(regValue)
+    var regValue = reg.value;
+    CreateElem(regValue);
    
 });
