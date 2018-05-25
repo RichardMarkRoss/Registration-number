@@ -2,34 +2,38 @@ var reg = document.querySelector('.myText');
 var valueBox = document.querySelector(".textBox");
 var btnDisplayValue = document.querySelector('.btnDisplayValue');
 var displayThePlates = document.querySelector(".displayThePlates");
-var storedUsers = reg.value;
+var btnDisplayCity = document.querySelector('.btnDisplayCity');
 
-var users = localStorage.getItem("users");
-var storedUsers = users ? JSON.parse(localStorage.getItem('users')) : {};
+var storedUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem('users')) : {};
 var nameHolder = RegNumber(storedUsers);
 
-function CreateFilter(regValue){
+function createElement(value) {
 
-
-    var checkedRadioBtn = document.querySelector("input[name='places']:checked");
-    if (checkedRadioBtn){
-        var places = checkedRadioBtn.value;
-    }
-    console.log(regValue)
-
-    localStorage.setItem('user', JSON.stringify(newLi));
-
-}
-function createElement(value){
     var newLi = document.createElement('li');
     var cont = document.createTextNode(value);
     newLi.appendChild(cont);
     displayThePlates.appendChild(newLi);
-    }
+}
 
-btnDisplayValue.addEventListener('click', function(){
+function displayingTheList(loop){
+for(var i = 0; i < loop.length; i++){
+    createElement(loop[i]);
+}
+}
+
+btnDisplayValue.addEventListener('click', function () {
     var regValue = reg.value;
-    if(nameHolder.logic(regValue)){
+    nameHolder.getting();
+    console.log(nameHolder.return());
+    
+    if (nameHolder.store(regValue) !== '') {
         createElement(regValue);
+        localStorage.setItem('users', JSON.stringify(nameHolder.return()));
     }
+});
+
+
+window.addEventListener('load', function(){
+    nameHolder.getting();
+    displayingTheList(nameHolder.list());
 });
