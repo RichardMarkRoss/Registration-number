@@ -15,25 +15,33 @@ function createElement(value) {
     displayThePlates.appendChild(newLi);
 }
 
-function displayingTheList(loop){
-for(var i = 0; i < loop.length; i++){
-    createElement(loop[i]);
-}
+function displayingTheList(loop) {
+    for (var i = 0; i < loop.length; i++) {
+        createElement(loop[i]);
+    }
 }
 
+function sepTheReg() {
+    nameHolder.split(loop);
+}
 btnDisplayValue.addEventListener('click', function () {
     var regValue = reg.value;
     nameHolder.getting();
     console.log(nameHolder.return());
-    
+
     if (nameHolder.store(regValue) !== '') {
         createElement(regValue);
         localStorage.setItem('users', JSON.stringify(nameHolder.return()));
     }
 });
 
+btnDisplayCity.addEventListener("click", function () {
+    displayThePlates.innerHTML = "";
+    nameHolder.filterThePlaces(reg, places);
+});
 
-window.addEventListener('load', function(){
+
+window.addEventListener('load', function () {
     nameHolder.getting();
     displayingTheList(nameHolder.list());
 });

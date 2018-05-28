@@ -4,6 +4,7 @@ function RegNumber(storedUsers) {
     var holdString = "";
     var separatedList = [];
     var holdingKeys = "";
+    
     function isValid(reg) {
         return reg.startsWith("CJ") ||
             reg.startsWith("CA") ||
