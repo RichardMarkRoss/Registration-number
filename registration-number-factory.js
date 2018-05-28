@@ -1,10 +1,10 @@
 function RegNumber(storedUsers) {
-//console.log(storedUsers);
+
     var namesStored = {};
     var holdString = "";
     var separatedList = [];
-    var holdingKeys = "";
-    
+    var holdingKeys = {};
+
     function isValid(reg) {
         return reg.startsWith("CJ") ||
             reg.startsWith("CA") ||
@@ -25,45 +25,32 @@ function RegNumber(storedUsers) {
                 namesStored[reg] = 0;
                 return reg;
             }
-        }
-        else{
+        } else {
             return '';
         }
     }
-    // console.log(storedUsers);
 
-    function filterThePlaces(reg, places) {
+    function filterThePlaces(places) {
 
-        for (var key in namesStored) {
-            if (places === "CapeTown") {
-                holdingKeys = key.startsWith("CA");
-                separatedList.push(holdingKeys);
-            }
-            if (places === "Bellville") {
-                holdingKeys = key.startsWith("CY");
-                separatedList.push(holdingKeys);
-            }
-            if (places === "Stellenbosch") {
-                holdingKeys = key.startsWith("CAW");
-                separatedList.push(holdingKeys);
-            }
-            if (places === "Paarl") {
-                holdingKeys = key.startsWith("CJ");
-                separatedList.push(holdingKeys);
-            }
-            if (places === "All") {
-                holdingKeys = key;
-                separatedList.push(holdingKeys);
-            }
+        var list = Object.keys(namesStored);
+
+        if (places === 'All') {
+            return list;
         }
-        return separatedList;
+        var filteredList = list.filter(function (regNum) {
+            return regNum.startsWith(places);
+
+        });
+
+        return filteredList;
 
     }
-    
+
     function returnRegMap() {
         return namesStored;
     }
-    function returnRegList(){
+
+    function returnRegList() {
         return Object.keys(namesStored);
     }
 
@@ -73,13 +60,13 @@ function RegNumber(storedUsers) {
     }
 
     return {
-        RegNumber,
         logic: getReg,
         return: returnRegMap,
         store: storingRegNumber,
         getting: getReg,
         split: filterThePlaces,
-        list : returnRegList
+        list: returnRegList,
+        clear: clear
     };
 
 }

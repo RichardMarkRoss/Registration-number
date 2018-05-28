@@ -3,6 +3,7 @@ var valueBox = document.querySelector(".textBox");
 var btnDisplayValue = document.querySelector('.btnDisplayValue');
 var displayThePlates = document.querySelector(".displayThePlates");
 var btnDisplayCity = document.querySelector('.btnDisplayCity');
+var clearBtn = document.querySelector('.clearBtn');
 
 var storedUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem('users')) : {};
 var nameHolder = RegNumber(storedUsers);
@@ -13,6 +14,15 @@ function createElement(value) {
     var cont = document.createTextNode(value);
     newLi.appendChild(cont);
     displayThePlates.appendChild(newLi);
+}
+
+function radioBtnDisplay() {
+    var checkedRadioBtn = document.querySelector("input[name='places']:checked");
+    if (checkedRadioBtn) {
+        var places = checkedRadioBtn.value;
+    }
+    return displayingTheList(nameHolder.split(places));
+
 }
 
 function displayingTheList(loop) {
@@ -37,7 +47,14 @@ btnDisplayValue.addEventListener('click', function () {
 
 btnDisplayCity.addEventListener("click", function () {
     displayThePlates.innerHTML = "";
-    nameHolder.filterThePlaces(reg, places);
+    radioBtnDisplay();
+
+
+
+});
+clearBtn.addEventListener("click", function () {
+    nameHolder.clear();
+    window.location.reload();
 });
 
 

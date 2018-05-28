@@ -1,8 +1,10 @@
-describe('the greetings function basic test', function(){
-    it('greetings function test greeting in English', function(){
+describe('the greetings function basic test', function () {
+    it('greetings function test greeting in English', function () {
 
-        var nameHolder = RegNumber('CA 1234');
+        var factory = RegNumber({
+            'CA 1234': 0
+        });
 
-        assert.equal(nameHolder.logic(),"CA 1234");
+        assert.equal(factory.split('CA'), ["CA 1234"]);
     });
 });

@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="registration-number.css">
-    <title>registration number</title>
-  </head>
-  <body>
-    <div class="container">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="registration-number.css">
+  <title>registration number</title>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div class="">
+      <h1>registration number web app</h1>
       <br>
-      <div class="">
-<h1>registration number web app</h1>
-<br>
-<h3>insert the registration number!</h3>
-      </div>
-      <br>
-      <div class="textBox">
-        <label>Name</label>
-        <input type = "text"
-               class = "myText"
-               value = "">
-               <button class="btnDisplayValue" type="button" name="button" >ADD</button>
-      </div>
-      <br>
-      <div class='button'> 
-       
+      <h3>insert the registration number!</h3>
     </div>
-      <div>
-          <form action="/action_page.php">
-            <input type="radio" class="placesTypeRadio" name="places" value="CapeTown">Cape Town</input>
-            <input type="radio" class="placesTypeRadio" name="places" value="Bellville">Bellville</input>
-            <input type="radio" class="placesTypeRadio" name="places" value="Stellenbosch">Stellenbosch</input>
-            <input type="radio" class="placesTypeRadio" name="places" value="Paarl">Paarl</input>
-            <input type="radio" class="placesTypeRadio" name="places" value="All">All</input>
-          </form>
-          <button class="btnDisplayCity" type="button" name="button" >ADD CITY</button>
-      </div>
+    <br>
+    <div class="textBox">
+      <label>Name</label>
+      <input type="text" class="myText" value="">
+      <button class="btnDisplayValue" type="button" name="button">ADD</button>
+    </div>
+    <br>
+    <div class='button'>
       <br>
-     
+      <button class="clearBtn" type="button" name="button">CLEAR</button>
       <br>
-      <div class="">
+    </div>
+    <div>
+      <form action="/action_page.php">
+        <input type="radio" class="placesTypeRadio" name="places" value="CA ">Cape Town(CA)</input>
+        <input type="radio" class="placesTypeRadio" name="places" value="CY">Bellville(CY)</input>
+        <input type="radio" class="placesTypeRadio" name="places" value="CL">Stellenbosch(CL)</input>
+        <input type="radio" class="placesTypeRadio" name="places" value="CJ">Paarl(CJ)</input>
+        <input type="radio" class="placesTypeRadio" name="places" value="CAW">Goerge(CAW)</input>
+        <input type="radio" class="placesTypeRadio" name="places" value="All">All</input>
+      </form>
+      <button class="btnDisplayCity" type="button" name="button">SELECT CITY</button>
+    </div>
+    <br>
+
+    <br>
+    <div class="">
       <ul class="displayThePlates">
 
       </ul>
-      </div>
     </div>
-  </body>
-  <script src="registration-number-factory.js" charset="utf-8"></script>
-  <script src="registration-number.js" charset="utf-8"></script>
+  </div>
+</body>
+<script src="registration-number-factory.js" charset="utf-8"></script>
+<script src="registration-number.js" charset="utf-8"></script>
+
 </html>
