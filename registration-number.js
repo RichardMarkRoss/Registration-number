@@ -14,6 +14,7 @@ function createElement(value) {
     var cont = document.createTextNode(value);
     newLi.appendChild(cont);
     displayThePlates.appendChild(newLi);
+
 }
 
 function radioBtnDisplay() {
@@ -39,7 +40,7 @@ btnDisplayValue.addEventListener('click', function () {
     var regValue = reg.value;
     nameHolder.getting();
 
-    if (nameHolder.store(regValue) !== '') {
+    if (nameHolder.store(regValue)) {
         createElement(regValue);
         localStorage.setItem('users', JSON.stringify(nameHolder.return()));
     }
