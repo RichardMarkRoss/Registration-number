@@ -34,10 +34,10 @@ function displayingTheList(loop) {
 function sepTheReg() {
     nameHolder.split(loop);
 }
+
 btnDisplayValue.addEventListener('click', function () {
     var regValue = reg.value;
     nameHolder.getting();
-    console.log(nameHolder.return());
 
     if (nameHolder.store(regValue) !== '') {
         createElement(regValue);
@@ -48,15 +48,12 @@ btnDisplayValue.addEventListener('click', function () {
 btnDisplayCity.addEventListener("click", function () {
     displayThePlates.innerHTML = "";
     radioBtnDisplay();
-
-
-
 });
+
 clearBtn.addEventListener("click", function () {
     nameHolder.clear();
     window.location.reload();
 });
-
 
 window.addEventListener('load', function () {
     nameHolder.getting();
