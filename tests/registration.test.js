@@ -113,7 +113,7 @@ describe('the registration function selected plates test', function () {
     });
 });
 describe('the registration function clearing the storage test', function () {
-    it('should display one reg number', function () {
+    it('should clear the reg numbers from the display and localStorage', function () {
 
         var nameHolder = RegNumber();
 
