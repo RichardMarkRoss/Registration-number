@@ -21,6 +21,8 @@ function radioBtnDisplay() {
     var checkedRadioBtn = document.querySelector("input[name='places']:checked");
     if (checkedRadioBtn) {
         var places = checkedRadioBtn.value;
+    }else{
+        alert('select city to search')
     }
     return displayingTheList(nameHolder.split(places));
 
@@ -43,6 +45,8 @@ btnDisplayValue.addEventListener('click', function () {
     if (nameHolder.store(regValue)) {
         createElement(regValue);
         localStorage.setItem('users', JSON.stringify(nameHolder.return()));
+    }else{
+        alert('please insert a value!')
     }
 });
 

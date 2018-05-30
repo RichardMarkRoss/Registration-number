@@ -1,6 +1,6 @@
 function RegNumber(storedUsers) {
 
-    var namesStored = {};
+    var namesStored = {} || storedUsers;
     var holdString = "";
     var separatedList = [];
     var holdingKeys = {};
@@ -17,6 +17,7 @@ function RegNumber(storedUsers) {
         if (storedUsers) {
             namesStored = storedUsers;
         }
+        return namesStored;
     }
 
     function storingRegNumber(reg) {
@@ -66,7 +67,8 @@ function RegNumber(storedUsers) {
         getting: getReg,
         split: filterThePlaces,
         list: returnRegList,
-        clear: clear
+        clear: clear,
+        valid: isValid
     };
 
 }
