@@ -44,8 +44,8 @@ describe('the registration number  filter test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123");
-        nameHolder.store("CA 123");
+        nameHolder.store("CA 123");//True
+        nameHolder.store("CA 123");//False
 
         assert.deepEqual(nameHolder.return(), {
             'CA 123': 0
