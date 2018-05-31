@@ -4,6 +4,7 @@ var btnDisplayValue = document.querySelector('.btnDisplayValue');
 var displayThePlates = document.querySelector(".displayThePlates");
 var btnDisplayCity = document.querySelector('.btnDisplayCity');
 var clearBtn = document.querySelector('.clearBtn');
+var theWarning = document.querySelector(".displayTheWarning");
 
 var storedUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem('users')) : {};
 var nameHolder = RegNumber(storedUsers);
@@ -40,14 +41,18 @@ function sepTheReg() {
 
 btnDisplayValue.addEventListener('click', function () {
     var regValue = reg.value;
-    nameHolder.getting();
+    if(nameHolder.getting()){
 
     if (nameHolder.store(regValue)) {
         createElement(regValue);
         localStorage.setItem('users', JSON.stringify(nameHolder.return()));
+        reg.classList.remove("warning");
+        theWarning.innerHTML = "";
     }else{
-        alert('please insert a value!')
+        reg.classList.add("warning");
+        theWarning.innerHTML = "insert a reg-plate or correct reg-plate e.g. CA 123, CY 123, etc.";
     }
+}
 });
 
 btnDisplayCity.addEventListener("click", function () {
