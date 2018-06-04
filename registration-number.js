@@ -23,7 +23,7 @@ function radioBtnDisplay() {
     if (checkedRadioBtn) {
         var places = checkedRadioBtn.value;
     }else{
-        alert('select city to search')
+        alert('select city to search');
     }
     return displayingTheList(nameHolder.split(places));
 
@@ -50,7 +50,7 @@ btnDisplayValue.addEventListener('click', function () {
         theWarning.innerHTML = "";
     }else{
         reg.classList.add("warning");
-        theWarning.innerHTML = "insert a reg-plate/ correct reg-plate e.g. CA 123, CY 123, etc. And should not be the same.";
+        theWarning.innerHTML = "insert a registration-plate or correct registration-plate (e.g. CA 123, CY 123, etc.) and should not be the same.";
     }
 }
 });

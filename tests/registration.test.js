@@ -123,7 +123,7 @@ describe('the registration function clearing the storage test', function () {
         nameHolder.store('CH 123'); 
         nameHolder.store('CJ 123');
         
-        nameHolder.clear()
+        nameHolder.clear();
 
         assert.deepEqual(nameHolder.logic(), {});
     });
