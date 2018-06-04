@@ -44,8 +44,8 @@ describe('the registration number  filter test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123");//True
-        nameHolder.store("CA 123");//False
+        nameHolder.store("CA 123");
+        nameHolder.store("CA 123");
 
         assert.deepEqual(nameHolder.return(), {
             'CA 123': 0
@@ -55,9 +55,9 @@ describe('the registration number  filter test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123");//True
-        nameHolder.store("CA 123");//False
-        nameHolder.store('CZ 123');//False
+        nameHolder.store("CA 123");
+        nameHolder.store("CA 123");
+        nameHolder.store('CZ 123');
 
         assert.deepEqual(nameHolder.return(), {
             'CA 123': 0
@@ -67,12 +67,12 @@ describe('the registration number  filter test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123");//True
-        nameHolder.store("CY 123");//True
-        nameHolder.store('CZ 123');//False
-        nameHolder.store('CK 123');//False
-        nameHolder.store('CH 123');//False
-        nameHolder.store('CJ 123');//True
+        nameHolder.store("CA 123");
+        nameHolder.store("CY 123");
+        nameHolder.store('CZ 123');
+        nameHolder.store('CK 123');
+        nameHolder.store('CH 123');
+        nameHolder.store('CJ 123');
 
         assert.deepEqual(nameHolder.return(), {
             'CA 123': 0,
@@ -87,13 +87,12 @@ describe('the registration function selected plates test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123");//True
-        nameHolder.store("CY 123");//False
-        nameHolder.store('CZ 123');//False
-        nameHolder.store('CA 231');//True
-        nameHolder.store('CH 123');//False
-        nameHolder.store('CJ 123');//False
-
+        nameHolder.store("CA 123");
+        nameHolder.store("CY 123");
+        nameHolder.store('CZ 123');
+        nameHolder.store('CA 231');
+        nameHolder.store('CH 123');
+        nameHolder.store('CJ 123');
 
         assert.deepEqual(nameHolder.split('CA'), ['CA 123', 'CA 231']);
     });
@@ -101,12 +100,12 @@ describe('the registration function selected plates test', function () {
 
         var nameHolder = RegNumber();
 
-        nameHolder.store("CA 123"); //True
-        nameHolder.store("CY 123"); //True
-        nameHolder.store('CZ 123'); //False
-        nameHolder.store('CA 231'); //True
-        nameHolder.store('CH 123'); //False
-        nameHolder.store('CJ 123'); //True
+        nameHolder.store("CA 123"); 
+        nameHolder.store("CY 123"); 
+        nameHolder.store('CZ 123'); 
+        nameHolder.store('CA 231'); 
+        nameHolder.store('CH 123'); 
+        nameHolder.store('CJ 123'); 
 
 
         assert.deepEqual(nameHolder.split('All'), ['CA 123', 'CY 123', 'CA 231', 'CJ 123',]);

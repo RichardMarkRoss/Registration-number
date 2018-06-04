@@ -50,7 +50,7 @@ btnDisplayValue.addEventListener('click', function () {
         theWarning.innerHTML = "";
     }else{
         reg.classList.add("warning");
-        theWarning.innerHTML = "insert a reg-plate or correct reg-plate e.g. CA 123, CY 123, etc.";
+        theWarning.innerHTML = "insert a reg-plate/ correct reg-plate e.g. CA 123, CY 123, etc. And should not be the same.";
     }
 }
 });
