@@ -5,7 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="registration-number.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
   <title>registration number</title>
+  <script type="text/x-template" class="regTemplate">
+
+    {{#each regList}}
+    <li>{{this}}</li>
+    {{/each}}
+
+  </script>
+
 </head>
 
 <body>
@@ -20,15 +30,17 @@
     <div class="textBox">
       <label>Number Plate</label>
       <form class="example" action="/action_page.php">
-        <input type="text" placeholder="Insert.." name="search2"  class="myText" value="">
-        <button class="btnDisplayValue" type="button" name="button"><i class="fa fa-search">ADD</i></button>
+        <input type="text" placeholder="Insert.." name="search" class="myText" value="">
+        <button class="btnDisplayValue" type="button" name="button">
+          <i class="fafa-search">ADD</i>
+        </button>
         <button class="clearBtn" type="button" name="button">CLEAR</button>
       </form>
     </div>
     <br>
     <div class='button'>
       <br>
-     <h3 class="displayTheWarning"></h3>
+      <h3 class="displayTheWarning"></h3>
       <br>
     </div>
     <div>
@@ -46,13 +58,58 @@
 
     <br>
     <div class="">
-      <ul class="displayThePlates">
+      <ul class="ThePlatesDisplay">
+
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <br>
+    <div class="">
+      <h1>Registration number web app</h1>
+      <br>
+      <h3>Insert the registration number Template!</h3>
+    </div>
+    <br>
+    <div class="warningLevels">
+      <label>Number Plate</label>
+      <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Insert.." name="searching" class="registration" value="">
+        <button class="buttonDisplayValue" type="button" name="btn">
+          <i class="fa fa-search">ADD</i>
+        </button>
+        <button class="clearButton" type="button" name="button">CLEAR</button>
+      </form>
+    </div>
+    <br>
+    <div class='button'>
+      <br>
+      <h3 class="warningLevels"></h3>
+      <br>
+    </div>
+    <div>
+      <form action="/action_page.php">
+        <input type="radio" class="placesRadio" name="filter" value="CA ">Cape Town(CA)</input>
+        <input type="radio" class="placesRadio" name="filter" value="CY">Bellville(CY)</input>
+        <input type="radio" class="placesRadio" name="filter" value="CL">Stellenbosch(CL)</input>
+        <input type="radio" class="placesRadio" name="filter" value="CJ">Paarl(CJ)</input>
+        <input type="radio" class="placesRadio" name="filter" value="CAW">George(CAW)</input>
+        <input type="radio" class="placesRadio" name="filter" value="All">All</input>
+      </form>
+      <button class="DisplayCitys" type="button" name="button">FILTER CITY</button>
+    </div>
+    <br>
+    <br>
+    <div class="">
+      <ul class="displayPlates">
 
       </ul>
     </div>
   </div>
 </body>
 <script src="registration-number-factory.js" charset="utf-8"></script>
+<script src="registrations-number-template.js" charset="utf-8"></script>
 <script src="registration-number.js" charset="utf-8"></script>
+
 
 </html>

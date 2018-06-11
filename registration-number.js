@@ -1,22 +1,30 @@
 var reg = document.querySelector('.myText');
 var valueBox = document.querySelector(".textBox");
 var btnDisplayValue = document.querySelector('.btnDisplayValue');
-var displayThePlates = document.querySelector(".displayThePlates");
+var displayThePlates = document.querySelector(".ThePlatesDisplay");
 var btnDisplayCity = document.querySelector('.btnDisplayCity');
 var clearBtn = document.querySelector('.clearBtn');
 var theWarning = document.querySelector(".displayTheWarning");
 
-var storedUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem('users')) : {};
+var storedUsers = localStorage.getItem("user1") ? JSON.parse(localStorage.getItem('user1')) : {};
 var nameHolder = RegNumber(storedUsers);
 
-function createElement(value) {
 
+function createRegNumberElem(regNumber){
     var newLi = document.createElement('li');
-    var cont = document.createTextNode(value);
+    var cont = document.createTextNode(regNumber);
     newLi.appendChild(cont);
-    displayThePlates.appendChild(newLi);
-
+    return newLi;
 }
+
+function appendRegNumElementOnLeft(value) {
+    //
+    var li = createRegNumberElem(value);
+    //
+    displayThePlates.appendChild(li);
+}
+
+
 
 function radioBtnDisplay() {
     var checkedRadioBtn = document.querySelector("input[name='places']:checked");
@@ -31,7 +39,7 @@ function radioBtnDisplay() {
 
 function displayingTheList(loop) {
     for (var i = 0; i < loop.length; i++) {
-        createElement(loop[i]);
+        appendRegNumElementOnLeft(loop[i]);
     }
 }
 
@@ -44,8 +52,8 @@ btnDisplayValue.addEventListener('click', function () {
     if(nameHolder.getting()){
 
     if (nameHolder.store(regValue)) {
-        createElement(regValue);
-        localStorage.setItem('users', JSON.stringify(nameHolder.return()));
+        appendRegNumElementOnLeft(regValue);
+        localStorage.setItem('user1', JSON.stringify(nameHolder.return()));
         reg.classList.remove("warning");
         theWarning.innerHTML = "";
     }else{

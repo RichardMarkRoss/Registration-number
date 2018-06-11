@@ -1,9 +1,17 @@
 function RegNumber(storedUsers) {
 
-    var namesStored = {} || storedUsers;
+    var namesStored =  {};
     var holdString = "";
     var separatedList = [];
     var holdingKeys = {};
+    
+    if(storedUsers){
+        for (i = 0; i< storedUsers.length; i++){
+            var regIndex = storedUsers[i]
+            namesStored[regIndex] = 0;
+        }
+
+    }
 
     function isValid(reg) {
         return reg.startsWith("CJ") ||
