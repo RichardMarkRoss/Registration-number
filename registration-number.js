@@ -69,7 +69,9 @@ btnDisplayCity.addEventListener("click", function () {
 });
 
 clearBtn.addEventListener("click", function () {
-    nameHolder.clear();
+    //nameHolder.clear();
+    namesStored = {};
+    localStorage.removeItem("user1");
     window.location.reload();
 });
 

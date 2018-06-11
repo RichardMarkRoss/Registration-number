@@ -1,5 +1,5 @@
 var registration = document.querySelector('.registration');
-// var theValueBox = document.querySelector(".warningLevels");
+ var theValueBox = document.querySelector(".warningLeveling");
 var buttonDisplayValue = document.querySelector('.buttonDisplayValue');
 var displayPlate = document.querySelector(".displayPlate");
 var displayCitys = document.querySelector('.DisplayCitys');
@@ -34,10 +34,14 @@ function separatingTheRegistration() {
 
 buttonDisplayValue.addEventListener('click', function () {
     var registrationValue = registration.value;
-    //holdingTheName.store(registrationValue);
 
     if (holdingTheName.store(registrationValue)) {
         localStorage.setItem('user2', JSON.stringify(holdingTheName.return()));
+        registration.classList.remove("warning");
+        theValueBox.innerHTML = "";
+    }else{
+        registration.classList.add("warning");
+        theValueBox.innerHTML = "insert a registration-plate or correct registration-plate (e.g. CA 123, CY 123, etc.) and should not be the same.";
     }
 
     var RegData = {
@@ -50,8 +54,6 @@ buttonDisplayValue.addEventListener('click', function () {
 
 displayCitys.addEventListener("click", function () {
     insertMyData.innerHTML = "";
-    // radioButtonDisplay(compileRegTemplate(RegData));
-    console.log(radioButtonDisplay())
 
     insertMyData.innerHTML = compileRegTemplate({
         regList: radioButtonDisplay()
@@ -60,7 +62,8 @@ displayCitys.addEventListener("click", function () {
 });
 
 clearButton.addEventListener("click", function () {
-    holdingTheName.clear();
+    namesStored = {};
+    localStorage.removeItem("user2");
     window.location.reload();
 });
 

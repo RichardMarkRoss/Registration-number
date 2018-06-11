@@ -63,10 +63,6 @@ function RegNumber(storedUsers) {
         return Object.keys(namesStored);
     }
 
-    function clear() {
-        namesStored = {};
-        localStorage.clear();
-    }
 
     return {
         logic: getReg,
@@ -75,8 +71,8 @@ function RegNumber(storedUsers) {
         getting: getReg,
         split: filterThePlaces,
         list: returnRegList,
-        clear: clear,
         valid: isValid
+
     };
 
 }
