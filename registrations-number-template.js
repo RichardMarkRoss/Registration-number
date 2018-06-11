@@ -53,7 +53,9 @@ displayCitys.addEventListener("click", function () {
     // radioButtonDisplay(compileRegTemplate(RegData));
     console.log(radioButtonDisplay())
 
-    insertMyData.innerHTML = compileRegTemplate({regList: radioButtonDisplay()});
+    insertMyData.innerHTML = compileRegTemplate({
+        regList: radioButtonDisplay()
+    });
 
 });
 

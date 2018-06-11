@@ -6,9 +6,9 @@
     padding: 0 20px;
     box-sizing: border-box;
     float: left;
-  }
+}
 
-li{
+li {
     border: 2px solid;
     border-radius: 8px;
     border-color: rgb(0, 0, 0);
@@ -19,6 +19,7 @@ li{
     margin: 0.5em 0;
     background-color: yellow;
 }
+
 .placesTypeRadio {
     background-color: #4CAF50;
     border: none;
@@ -31,10 +32,12 @@ li{
     margin: 4px 2px;
     cursor: pointer;
 }
-.warning{
+
+.warning {
     background-color: coral
 }
-.placesRadio{
+
+.placesRadio {
     background-color: #4CAF50;
     border: none;
     color: white;
