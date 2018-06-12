@@ -41,26 +41,27 @@ li {
 }
 
 .placesRadio {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
 }
 .placesTypeRadio {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+p{
+    position: relative;
+    width: 100%;
+    max-width: 90px;
+    margin: 0 auto;
+    padding: 0 6px;
     display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
+    margin: 5px;
 }
