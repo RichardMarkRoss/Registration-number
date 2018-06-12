@@ -1,12 +1,15 @@
 .container {
     position: relative;
     width: 50%;
-    max-width: 960px;
-    /* margin: 0 auto; */
+    max-width: 640px;
+    margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    float: left;
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid #73AD21; 
 }
+
 
 li {
     border: 2px solid;
@@ -38,6 +41,18 @@ li {
 }
 
 .placesRadio {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.placesTypeRadio {
     background-color: #4CAF50;
     border: none;
     color: white;
