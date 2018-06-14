@@ -1,14 +1,17 @@
 .container {
     position: relative;
-    width: 600px;
+    width: 50%;
     max-width: 650px;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     box-sizing: border-box;
     display: inline-block;
-    margin: 10px;
+    /* margin: 10px; */
 
 }
+    .float{
+        float: right;
+    }
 
 
 li {
@@ -25,16 +28,18 @@ li {
 }
 
 .placesTypeRadio {
-    background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
+    font-size: 10px;
+    margin: 0px 1rem;
     cursor: pointer;
+}
+
+form{
+    font-size: 12px;
 }
 
 .warning {
@@ -42,21 +47,17 @@ li {
 }
 
 .placesRadio {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-2px 10px 0 0;
-    vertical-align:middle;
-    cursor:pointer;
-}
-.placesTypeRadio {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-2px 10px 0 0;
-    vertical-align:middle;
-    cursor:pointer;
-}
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0px 1rem;
+    cursor: pointer;
+    }
+
+
 p{
     position: relative;
     width: 100%;
