@@ -7,6 +7,7 @@
     box-sizing: border-box;
     display: inline-block;
     margin: 10px;
+    float: left;
 }
 .container1 {
     position: relative;
@@ -29,9 +30,9 @@ li {
     border-color: rgb(0, 0, 0);
     list-style-type: none;
     display: block;
-    width: 10%;
+    width: 15%;
     /* padding-left: 30px; */
-    margin: 0.7em 0;
+    margin: 0.7em 0.3em;
     background-color: yellow;
 }
 
