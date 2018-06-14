@@ -1,17 +1,25 @@
 .container {
     position: relative;
-    width: 50%;
+    width: 45%;
     max-width: 650px;
     margin: 0 auto;
-    /* padding: 0 20px; */
+    padding: 0 20px;
     box-sizing: border-box;
     display: inline-block;
-    /* margin: 10px; */
-
+    margin: 10px;
 }
-    .float{
-        float: right;
-    }
+.container1 {
+    position: relative;
+    width: 45%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+    float: right;
+}
+
 
 
 li {
