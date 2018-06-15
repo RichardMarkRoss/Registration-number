@@ -7,7 +7,7 @@
     box-sizing: border-box;
     display: inline-block;
     margin: 10px;
-    float: left;
+    /* float: left; */
 }
 .container1 {
     position: relative;
@@ -18,7 +18,7 @@
     box-sizing: border-box;
     display: inline-block;
     margin: 10px;
-    float: right;
+    float: left;
 }
 
 
