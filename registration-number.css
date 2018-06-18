@@ -76,3 +76,13 @@ p{
     display: inline-block;
     margin: 5px;
 }
+@media only screen and (max-width: 650px) {
+    .placesTypeRadio {
+        padding:20px;
+        display: grid;
+    }
+    .placesRadio {
+        padding:20px;
+        display: grid;
+        }
+}
