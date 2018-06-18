@@ -9,6 +9,7 @@
     margin: 10px;
     /* float: left; */
 }
+
 .container1 {
     position: relative;
     width: 45%;
@@ -20,8 +21,6 @@
     margin: 10px;
     float: left;
 }
-
-
 
 li {
     position: relative;
@@ -47,7 +46,7 @@ li {
     cursor: pointer;
 }
 
-form{
+form {
     font-size: 12px;
 }
 
@@ -64,10 +63,9 @@ form{
     font-size: 10px;
     margin: 0px 1rem;
     cursor: pointer;
-    }
+}
 
-
-p{
+p {
     position: relative;
     width: 100%;
     max-width: 90px;
@@ -76,13 +74,26 @@ p{
     display: inline-block;
     margin: 5px;
 }
+
 @media only screen and (max-width: 650px) {
     .placesTypeRadio {
-        padding:20px;
+        padding: 20px;
         display: grid;
     }
     .placesRadio {
-        padding:20px;
+        padding: 20px;
         display: grid;
-        }
+    }
+    li {
+        position: relative;
+        border: 2px solid;
+        border-radius: 8px;
+        border-color: rgb(0, 0, 0);
+        list-style-type: none;
+        display: block;
+        width: 30%;
+        padding-left: 30px;
+        margin: 0.7em 0.3em;
+        background-color: yellow;
+    }
 }
