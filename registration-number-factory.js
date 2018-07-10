@@ -7,7 +7,7 @@ function RegNumber(storedUsers) {
 
     if (storedUsers) {
         for (i = 0; i < storedUsers.length; i++) {
-            var regIndex = storedUsers[i]
+            var regIndex = storedUsers[i];
             namesStored[regIndex] = 0;
         }
 

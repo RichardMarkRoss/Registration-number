@@ -15,12 +15,10 @@ var insertMyData = document.querySelector('.displayPlates');
 var storingTheUsers = localStorage.getItem("user2") ? JSON.parse(localStorage.getItem('user2')) : {};
 var holdingTheName = RegNumber(storingTheUsers);
 
-
-function radioButtonDisplay() {
-    var radioButtons = document.querySelector("input[name='filter']:checked");
-    if (radioButtons) {
-        var filterPlaces = radioButtons.value;
-        return holdingTheName.split(filterPlaces);
+function theDropDown(){
+    var dropedDown = document.getElementById("placesRadio").value;   
+    if (dropedDown) {
+        return holdingTheName.split(dropedDown);
     } else {
         alert('select city to search');
     }
@@ -56,7 +54,7 @@ displayCitys.addEventListener("click", function () {
     insertMyData.innerHTML = "";
 
     insertMyData.innerHTML = compileRegTemplate({
-        regList: radioButtonDisplay()
+        regList: theDropDown()
     });
 
 });

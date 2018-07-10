@@ -24,17 +24,13 @@ function appendRegNumElementOnLeft(value) {
     displayThePlates.appendChild(li);
 }
 
-
-
-function radioBtnDisplay() {
-    var checkedRadioBtn = document.querySelector("input[name='places']:checked");
-    if (checkedRadioBtn) {
-        var places = checkedRadioBtn.value;
+function codeDropDown(){
+    var dropDown = document.getElementById("placesTypeRadio").value;   
+    if (dropDown) {
+        return displayingTheList(nameHolder.split(dropDown));
     } else {
         alert('select city to search');
     }
-    return displayingTheList(nameHolder.split(places));
-
 }
 
 function displayingTheList(loop) {
@@ -65,7 +61,7 @@ btnDisplayValue.addEventListener('click', function () {
 
 btnDisplayCity.addEventListener("click", function () {
     displayThePlates.innerHTML = "";
-    radioBtnDisplay();
+    codeDropDown();
 });
 
 clearBtn.addEventListener("click", function () {

@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  <div class="holdKing">
   <div class="container">
     <br>
     <div class="">
@@ -44,17 +45,18 @@
       <br>
     </div>
     <div>
-      <form action="/action_page.php">
-       <input type="radio" class="placesTypeRadio" name="places" value="CA ">Cape Town(CA)</input>
-         <input type="radio" class="placesTypeRadio" name="places" value="CY">Bellville(CY)</input>
-           <input type="radio" class="placesTypeRadio" name="places" value="CL">Stellenbosch(CL)</input>
-              <input type="radio" class="placesTypeRadio" name="places" value="CJ">Paarl (CJ)</input>
-               <input type="radio" class="placesTypeRadio" name="places" value="CAW">George(CAW)</input>
-                 <input type="radio" class="placesTypeRadio" name="places" value="All">All</input>
-      </form>
-      <br>
-      <button class="btnDisplayCity" type="button" name="button">FILTER CITY</button>
+        <select id="placesTypeRadio">
+            <option value="CA ">Cape Town</option>
+            <option value="CY">Bellville</option>
+            <option value="CL">Stellenbosch</option>
+            <option value="CJ">Paarl</option>
+            <option value="CAW">Goerge</option>
+            <option value="All">All</option>
+          </select>
+     
     </div>
+    <br>
+    <button class="btnDisplayCity" type="button" name="button">FILTER CITY</button>
     <br>
 
     <br>
@@ -64,6 +66,7 @@
       </ul>
     </div>
   </div>
+
   <div class="container1 float">
     <br>
     <div class="">
@@ -89,18 +92,21 @@
       <br>
     </div>
     <div>
-      <form action="/action_page.php">
-        <input type="radio" class="placesRadio" name="filter" value="CA ">Cape Town(CA)</input>
-        <input type="radio" class="placesRadio" name="filter" value="CY">Bellville(CY)</input>
-        <input type="radio" class="placesRadio" name="filter" value="CL">Stellenbosch(CL)</input>
-        <input type="radio" class="placesRadio" name="filter" value="CJ">Paarl (CJ)</input>
-        <input type="radio" class="placesRadio" name="filter" value="CAW">George(CAW)</input>
-        <input type="radio" class="placesRadio" name="filter" value="All">All</input>
-      </form>
-      <br>
-      <button class="DisplayCitys" type="button" name="button">FILTER CITY</button>
+        <select id="placesRadio">
+            <option value="CA ">Cape Town</option>
+            <option value="CY">Bellville</option>
+            <option value="CL">Stellenbosch</option>
+            <option value="CJ">Paarl</option>
+            <option value="CAW">Goerge</option>
+            <option value="All">All</option>
+          </select>
+
+    
     </div>
     <br>
+    <button class="DisplayCitys" type="button" name="button">FILTER CITY</button>
+    <br>
+    
     <br>
     <div class="">
       <ul class="displayPlates">
@@ -108,6 +114,7 @@
       </ul>
     </div>
   </div>
+</div>
 </body>
 <script src="registration-number-factory.js" charset="utf-8"></script>
 <script src="registrations-number-template.js" charset="utf-8"></script>
