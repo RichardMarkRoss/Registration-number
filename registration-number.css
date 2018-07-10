@@ -45,10 +45,12 @@ li {
     border-color: rgb(0, 0, 0);
     list-style-type: none;
     display: block;
-    width: 20%;
+    width: 7.50em;
     margin: 0.7em 0.3em;
     background-color: yellow;
     text-align: center;
+    float: left;
+    padding: 0.5em
 }
 
 
@@ -78,7 +80,7 @@ p {
         border-color: rgb(0, 0, 0);
         list-style-type: none;
         display: inline-block;
-        width: 60%;
+        width: 7.5em;
         margin: 0.7em 0.3em;
         background-color: yellow;
         text-align: center;
